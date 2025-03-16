@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='style1.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='stylebody.css') }}" rel="stylesheet">
+    <title>Flask User Registration</title>
+</head>
+<body>
+<div class="area" >
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div >
+<form class="login">
+    <h1 style="text-align: center;">Available Videos</h1>
+    <label for="video_select">Choose a video:</label>
+    <select id="video_select" name="filename">
+        {% for video in videos %}
+            <option value="{{ video }}">{{ video }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    <button type="submit">Play Video</button>
+    {% if selected_video %}
+    <video width="1000" height="600" controls >
+        <source src="{{ url_for('stream_video', filename=selected_video) }}" type="video/mp4">
+    </video>
+    {% endif %}
+</form>
+</body>
+</html>

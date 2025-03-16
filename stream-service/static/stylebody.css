@@ -1,0 +1,81 @@
+body {
+  overflow: hidden;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  font-family: "Asap", sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.login::after {
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 20px; /* Adjusts the distance from the bottom */
+  right: 20px; /* Adjusts the distance from the right */
+  transition: box-shadow 300ms;
+}
+
+.login:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login > input {
+  font-family: "Asap", sans-serif;
+  display: block;
+  border-radius: 25px;
+  font-size: 16px;
+  background: #f4f4f4;
+  width: calc(100% - 20px);
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+  margin: 10px 0;
+  transition: background 200ms, border 200ms;
+}
+
+.login > input:focus {
+  background: #eaeaea;
+  border-color: #4ca1af;
+  outline: none;
+}
+
+.login > button {
+  font-family: "Asap", sans-serif;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 25px;
+  background-color: #4ca1af;
+  transition: background-color 300ms;
+}
+
+.login > button:hover {
+  background-color: #3a8d99;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 12px;
+  transition: color 200ms;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 1);
+}

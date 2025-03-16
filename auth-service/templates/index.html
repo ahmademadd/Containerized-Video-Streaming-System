@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='style1.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='stylebody.css') }}" rel="stylesheet">
+    <title>Flask User Registration</title>
+</head>
+<body>
+<div class="area" >
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div >
+
+<form class="login" action="http://localhost:5000/" method="post">
+        <h1>Login Page</h1>
+        <input type="text" placeholder="UserName" name="username" required>
+        <input type="password" placeholder="Password" name="password" required>
+        <button type="submit">Log in</button>
+</form>
+
+</body>
+</html>

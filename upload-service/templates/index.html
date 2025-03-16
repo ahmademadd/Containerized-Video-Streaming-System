@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='style1.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='stylebody.css') }}" rel="stylesheet">
+    <title>Flask User Registration</title>
+</head>
+<body>
+<div class="area" >
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="login" style="position: relative;">
+    <form action="http://localhost:5002/stream">
+        <button style="margin-top: 7px;" type="submit" >Go to Video Stream</button>
+    </form>
+</div>
+<form class="login" method="post" enctype="multipart/form-data">
+    <h1>Upload Video Page</h1>
+    <input type="file" name="filename" accept="video/mp4">
+    <button style="margin-top: 7px;" type="submit">Upload</button>
+</form>
+</body>
+</html>
