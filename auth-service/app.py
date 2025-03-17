@@ -1,8 +1,7 @@
-from flask import Flask, redirect, url_for, render_template, request, flash, session
+from flask import Flask, redirect, render_template, request, session
 from flask_mysqldb import MySQL
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_session import Session
-import time
 import redis
 
 app = Flask(__name__)
@@ -38,6 +37,7 @@ def login():
             session['username'] = username
             cur.execute("INSERT INTO users (username, password_hash) VALUES (%s, %s)", (username, hashed_password))
             mysql.connection.commit()
+            cur.close()
             return redirect("http://localhost:5001/upload")
         else:
             if check_password_hash(user['password_hash'], password):
@@ -45,7 +45,6 @@ def login():
                 return redirect("http://localhost:5001/upload")
             else:
                 return "Incorrect password!", 403 
-        cur.close()
 
     return render_template("index.html")
 

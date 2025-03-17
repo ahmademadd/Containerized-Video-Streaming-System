@@ -1,10 +1,9 @@
-from flask import Flask, redirect, url_for, render_template, request, flash, session
+from flask import Flask, redirect, render_template, request, session
 from flask_mysqldb import MySQL
-from werkzeug.security import generate_password_hash, check_password_hash
 from flask_session import Session
-import time
 import redis
 import os
+
 app = Flask(__name__)
 
 app.config['SESSION_TYPE'] = 'redis'
@@ -26,7 +25,7 @@ mysql = MySQL(app)
 UPLOAD_FOLDER = "/videos"
 
 @app.route('/upload', methods=['GET', 'POST'])
-def login():
+def upload():
     if request.method == 'POST':
         file = request.files['filename']
         

@@ -1,4 +1,4 @@
-from flask import Flask, Response, render_template, send_from_directory, session, request
+from flask import Flask, Response, render_template, session, request
 from flask_mysqldb import MySQL
 from flask_session import Session
 import os
