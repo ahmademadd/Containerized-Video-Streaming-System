@@ -6,7 +6,7 @@ _By Ahmad Emad_
 - **Email**: [ahmademad995.ae@gmail.com](mailto:ahmademad995.ae@gmail.com)
 
 ## Overview
-Video streaming system / Cloud video storage system. This project is a **Flask-based media management system** that allows authenticated users to upload and stream MP4 files. The system is built using **Docker and Docker Compose**, ensuring a modular and scalable microservices architecture. Enabling users to upload videos securely stream and store them on the cloud.
+This project is a **Flask-based Video streaming system / Cloud video storage system.** that allows authenticated users to upload and stream MP4 files. The system is built using **Docker and Docker Compose**, ensuring a modular and scalable microservices architecture. Enabling users to upload videos securely stream and store them on the cloud.
 
 ## Features
 - **User Authentication:** Secure login system using MySQL and Redis for session management.
